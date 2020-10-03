@@ -38,7 +38,7 @@ def wantedvalues(x):
     weather = windowing(weather)
     tmax,tmin,rain=gettemp(weather)
     x=int(x)
-    tempformonth = "<h1>Data for the month{}</h1> <br/> Maximum Temperature : {} <br/> Minimum Temperature :{} <br/> Rain : {}".format(x,tmax[x],tmin[x],rain[x])
+    tempformonth=({"Maximum Temperature":str(tmax[x]),"Minimum Temperature":str(tmin[x]),"Rain":str(rain[x])})
     return tempformonth
 
 from flask import Flask,render_template, request
